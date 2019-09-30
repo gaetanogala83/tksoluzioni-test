@@ -14,6 +14,6 @@ public class MacController {
     @GetMapping("price")
     public String getMacPrice(@RequestParam(name = "model") Integer model, @RequestParam(name = "cpu", required = false, defaultValue = "0") Integer cpu) throws Exception {
 
-        return String.valueOf(macPriceService.getMac(model, cpu).getPrice());
+        return String.valueOf(macPriceService.getMac(model, cpu).getPrice())+"\\u20ac";
     }
 }
